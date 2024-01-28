@@ -1,0 +1,50 @@
+body {
+    background-image: url("../images/accueil.jpg"), url("../images/hogwarts.jpg");
+    background-position: top center, bottom center;
+    background-size: none, none;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: scroll;
+    text-decoration: none;
+    margin: 0;
+}
+
+header{
+    text-decoration: none;
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a{
+    color: white;
+}
+
+h1{
+    color: white;
+    margin-left: 5px;
+    margin-top: 100px;
+    margin-bottom: 0;
+    align-items: center;
+    text-align: center;
+}
+
+p{
+    color: white;
+    margin-left: 5px;
+    align-items: center;
+    margin-top: 0;
+    text-align: center;
+}
+
+.presentationcartes{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}

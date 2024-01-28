@@ -1,0 +1,1 @@
+alert('Les débuts en JS !')
