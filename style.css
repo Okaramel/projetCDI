@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 body {
-    background-image: url("../images/accueil.jpg"), url("../images/hogwarts.jpg");
-    background-position: top center, bottom center;
-    background-size: none, none;
-    background-repeat: no-repeat, no-repeat;
+    background-image: url("../images/accueil.png");
+    background-position: top center;
+    background-size: none;
+    background-repeat: no-repeat;
     background-attachment: scroll;
     text-decoration: none;
     margin: 0;
+    flex-direction: column;
+    background-attachment: fixed;
+    font-family: 'Playfair Display', serif;
 }
 
 header{
@@ -13,13 +18,26 @@ header{
 
 }
 
-ul{
+.menu{
     list-style-type: none;
+    text-decoration: none;
 }
 
 nav ul{
     display: flex;
     justify-content: space-evenly;
+    list-style-type: none;
+}
+
+nav a{
+
+    color: white;
+    text-decoration: none;
+    transition: .5s;
+}
+
+nav a:hover{
+    color: goldenrod;
 }
 
 a{
@@ -47,4 +65,30 @@ p{
     display: flex;
     justify-content: center;
     margin-top: 150px;
+}
+
+.listing{
+    margin-top: 200px;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#list{
+    list-style: none;
+}
+
+li {
+    display: inline;
+    margin-right: 10px;
+}
+h3 {
+    padding-left: 60px;
+    color: white;
+    justify-content: space-between;
 }
