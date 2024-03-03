@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/page5.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <!--Liste pour le menu de la navigation-->
+            <ul>
+                <li> <a href="index.html">Accueil</a> </li>
+                <li> <a href="page4.html">Connexion</a> </li>
+                <li> <a href="page5.html">Inscription</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="field">
+            <h1>S'inscrire</h1>
+            <div class="message-error">
+                <ul></ul>
+            </div>
+        
+            <div class="message-success">
+                Formulaire envoyé avec succès !
+            </div>
+        
+            <form action="" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="pseudo">Pseudo : </label>
+                    <input type="text" name="pseudo" id="pseudo">
+                </div>
+        
+                <div>
+                    <label for="email">Email : </label>
+                    <input type="email" name="email" id="email">
+                </div>
+        
+                <div>
+                    <label for="password">Mot de passe : </label>
+                    <input type="password" name="password" id="password">
+                </div>
+        
+                <div>
+                    <label for="password2">Confirmation du mot de passe : </label>
+                    <input type="password" name="password" id="password2">
+                </div>
+        
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+        
+    </main>
+
+    <footer></footer>
+
+<script src="../javascript/page5.js"></script>
+</body>
+</html>
