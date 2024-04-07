@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+    /*Dans ce body, je demande à ce que mon background soit fixe même en scrollant et qu'il soit au centre.
+    Je demande également à ce que mon fond soit légèrement flouté.*/
+    background-image: url("../images/accueil.png");
+    background-position: top center;
+    background-size: none;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    text-decoration: none;
+    margin: 0;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    font-family: 'Playfair Display', serif;
+}
+
+header{
+    /*Pour éviter les couleurs qui montrent que j'étais déjà sur ce site.*/
+    text-decoration: none;
+
+}
+
+.menu{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav ul{
+    /*Pour que les différents liens soient répartis dans l'écran*/
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    transition: .5s;
+}
+
+a{
+    color: white;
+}
+
+nav a:hover{
+    /*Dès que ma souris passe sur les liens, une couleur goldenrod apparaisse progressivement en 5s*/
+    color: goldenrod;
+}
+
+img{
+    /*J'ajuste toutes les photos pour qu'elle puisse être de taille conforme à leur boîte et également toutes pareilles.*/
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    /*Je lui donne également une transition pour la suite qui va durer 0.5s et qui va accélerer progressivement au 
+    début, ralentit au milieu et réaccélère à la fin de la transition*/
+    transition: 0.5s ease-in-out
+}
+
+#booster{
+    /*Ce code-ci permet à ce que les différentes cartes ne se chevauchent pas*/
+    margin: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.card {
+    /*Pour que nos cartes ressortent bien, je vais leur donner un fond flou et légèrement blanc.*/
+    width: 20rem;
+    height: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    position: relative;
+}
+
+.card img {
+    transition: 0.5s ease-in-out;
+}
+
+/*Cela créer une ordure blanche dans ma boîte, par-dessus l'image*/
+.card::after {
+    content:"";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+/*Cela créer une carte plus grise et moins lumineuse pour faire comme un fond*/
+.card:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+
+
+/*Cela permet de rendre l'opacité de l'élément pour le rendre visible et cela déplace le bord légèrement vers l'intérieur de la carte*/
+.card:hover::after{
+    opacity: 1;
+    inset: 20px;
+}
+
+
+/*Mon but ici (où je travaille encore), c'est que pendant que mon fond devient gris et qu'un border blanc apparaît,
+mon contenu détaillé de l'API puisse apparaître également sur la carte du personnage.*/
+.contenu {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.contenu p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d1d1d1;
+    transform: translateY(50%);
+}
+
+.contenu p {
+    opacity: 0;
+    transition: 0.4s 0.2s ease;
+  }
+
+.card:hover .contenu p {
+    opacity: 1;
+    transform: translateY(0);
+}

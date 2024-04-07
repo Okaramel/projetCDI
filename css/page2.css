@@ -10,6 +10,8 @@ body {
     margin: 0;
     flex-direction: column;
     background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
     font-family: 'Playfair Display', serif;
 }
 
@@ -44,58 +46,46 @@ nav a:hover{
     color: goldenrod;
 }
 
-h1{
-    color: white;
-    margin-left: 5px;
-    margin-top: 100px;
-    margin-bottom: 0;
-    align-items: center;
-    text-align: center;
-}
-
-p{
-    color: white;
-    margin-left: 5px;
-    align-items: center;
-    margin-top: 0;
-    text-align: center;
-}
-
-.presentationcartes{
+.profil{
+    margin-top: 60px;
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    align-items: center;
 }
 
-.listing{
-    margin-top: 200px;
-    list-style-type: none;
-    padding: 0;
+.pfp {
     display: flex;
-    justify-content: space-between;
+    justify-content: content;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
-ul{
-    list-style-type: none;
+.galerie {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    padding: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
 }
 
-#list{
-    list-style: none;
+.boosters {
+    color: rgb(71, 71, 71);
+    display: flex;
+    justify-content: center;
 }
 
-li {
-    display: inline;
-}
-h3 {
-    padding-left: 60px;
-    color: white;
+.perso {
+    display: flex;
+    justify-content: center;
 }
 
-.display_card{
-    transition: 1s;
-    transform: scale(1);
-}
-
-.display_card:hover{
-    transform: scale(1.1);
+h1 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
