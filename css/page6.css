@@ -42,7 +42,7 @@ nav a{
 }
 
 a{
-    color: white;
+    color: black;
 }
 
 nav a:hover{
@@ -82,26 +82,11 @@ img{
     border-radius: 10px;
     backdrop-filter: blur(20px);
     position: relative;
+    text-align: center;
 }
 
 .card img {
     transition: 0.5s ease-in-out;
-}
-
-/*Cela créer une ordure blanche dans ma boîte, par-dessus l'image*/
-.card::after {
-    content:"";
-    position: absolute;
-    inset: 0;
-    border: 2px solid white;
-    border-radius: inherit;
-    opacity: 0;
-    transition: 0.4s ease-in-out;
-}
-
-/*Cela créer une carte plus grise et moins lumineuse pour faire comme un fond*/
-.card:hover img {
-    filter: grayscale(1) brightness(0.4);
 }
 
 
@@ -111,31 +96,26 @@ img{
     inset: 20px;
 }
 
-
-/*Mon but ici (où je travaille encore), c'est que pendant que mon fond devient gris et qu'un border blanc apparaît,
-mon contenu détaillé de l'API puisse apparaître également sur la carte du personnage.*/
-.contenu {
-    width: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.boutoucarte {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
     text-align: center;
-  }
-
-.contenu p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #d1d1d1;
-    transform: translateY(50%);
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
 }
 
-.contenu p {
-    opacity: 0;
-    transition: 0.4s 0.2s ease;
-  }
-
-.card:hover .contenu p {
-    opacity: 1;
-    transform: translateY(0);
+.boutoucarte :hover {
+    background-color: rgba(48, 47, 47, 0.2);
+    border: 1px solid rgba(53, 53, 53, 0.6);
+    transition: 0.3s ease;
 }
+
+
+

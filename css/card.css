@@ -1,0 +1,70 @@
+body {
+    background-image: url("../images/accueil.png");
+    background-position: top center;
+    background-size: none;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    text-decoration: none;
+    margin: 0;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    font-family: 'Playfair Display', serif;
+}
+
+header{
+    text-decoration: none;
+
+}
+
+.menu{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+nav a{
+
+    color: white;
+    text-decoration: none;
+    transition: .5s;
+}
+
+a{
+    color: white;
+}
+
+nav a:hover{
+    color: goldenrod;
+}
+
+img {
+    width: 500px;
+    height: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    position: relative;
+}
+
+.cardUnique {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    align-items: center;
+    text-align: center;
+}

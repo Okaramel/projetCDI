@@ -21,14 +21,28 @@ async function displaypersos() {
         //Dans cette boîte nous allons ajouter les données que nous voulons depuis l'API 
         contenu.innerHTML = `
         <img src="${data.image}" alt="${data.name}"/>
-        <h1>${data.name}</h1>
-        `
+        <h1><button class="boutoucarte"><a href="card.html?id=${data.slug}">${data.name}</a></button></h1>`
         //Nous allons désormais mettre notre contenu dans la boîte que nous avons créer dans le fichier HTML
         cartes.appendChild(contenu)
+    });
 
-        
-    })
+    let house = data.house;
+    switch (house) {
+      case "Gryffindor":
+        cardElement.classList.add("gry");
+        break;
+      case "Slytherin":
+        cardElement.classList.add("sly");
+        break;
+      case "Hufflepuff":
+        cardElement.classList.add("huf");
+        break;
+      case "Ravenclaw":
+        cardElement.classList.add("rav");
+        break;
+      default:
+        cardElement.classList.add("nh");
+    }
 }
 //Désormais, nous demandons à ce que notre fonction se lance
 displaypersos()
-
