@@ -3,36 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <header>
-        <!--Liste pour le menu de la navigation-->
-        <nav class="menu">
-            <ul>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Harry Potter</a>
+            </div>
+            <!--Liste pour le menu de la navigation-->
+            <ul class="menu">
                 <li> <a href="index.html">Accueil</a> </li>
-                <li> <a href="page6.html">Personnages</a> </li>
-                <li> <a href="page4.html">Connexion</a> </li>
-                <li> <a href="page5.html">Inscription</a> </li>
+                <li> <a href="personnages.html">Personnages</a> </li>
             </ul>
-        </nav>
+            <div class="buttons">
+                <a class="active co" href="connexion.html">Se connecter</a>
+                <a class="active ins" href="inscription.html">S'inscrire</a>
+            </div>
+            <div class="menu-bouton">
+                <img src="../svg/bars-solid (1).svg" alt="" width="30">
+            </div>
+        </div>
+        <div class="burger-menu">
+            <ul class="menu">
+                <li> <a href="index.html">Accueil</a> </li>
+                <li> <a href="personnages.html">Personnages</a> </li>
+                <div class="divider"></div>
+                <div class="buttons-menu">
+                    <a class="active co" href="connexion.html">Se connecter</a>
+                    <a class="active ins" href="inscription.html">S'inscrire</a>
+                </div>
+            </ul>
+        </div>
     </header>
 
     <main>
-        <!--Boîte qui enveloppe tout le contenu-->
+
         <div class="principal">
             <div class="intro">
                 <h1>Collectionnez dès maintenant les cartes de l'univers d'Harry Potter !</h1>
                 <p>Inscrivez-vous pour collectionner tous les personnages de l'univers des sorciers !</p>
             </div>
-            <!--Présentation des cartes maisons-->
+
             <div class="presentationcartes">
-                <img class="houses" src="../images/presentation_cartes.png" alt="cartes hp" width="700">
+                <img class="houses" src="../images/presentation_cartes.png" alt="cartes hp">
             </div>
-            <!--La liste des boutons qui filtreront nos cartes-->
-            <div class="listing">
+
+            <div class="listing box">
                 <div class="filtres">
                     <button class="filtre" data-filter="tous">Tous</button>
                     <button class="filtre" data-filter="gryf">Gryffondor</button>
@@ -40,10 +59,10 @@
                     <button class="filtre" data-filter="serd">Serdaigle</button>
                     <button class="filtre" data-filter="pouf">Poufsouffle</button>
                 </div>
-                <!--Boîte qui enveloppe toutes les cartes-->
+
                 <div class="card-container">
-                    <!--On sépare les cartes en leur maison pour pouvoir faciliter leurs filtrage-->
-                    <div class="cartes gryf">
+
+                    <div class="cartes gryf box">
                         <img src="../cartes_booster/fredetgeorge_weasley.png" alt="fred et george weasley" width="200px">
                         <img src="../cartes_booster/harry_potter.png" alt="harry Potter" width="200px">
                         <img src="../cartes_booster/hermione_granger.png" alt="hermione hermione_granger" width="200px">
@@ -52,18 +71,18 @@
                         <img src="../cartes_booster/ron_weasley.png" alt="ron weasley" width="200px">
                         <img src="../cartes_booster/sirius_black.png" alt="sirius black" width="200px">
                     </div>
-                    <div class=" cartes serp">
+                    <div class=" cartes serp box">
                         <img src="../cartes_booster/dracomalfoy.png" alt="draco malfoy" width="200px">
                         <img src="../cartes_booster/luciusmalfoy.png" alt="lucius malfoy" width="200px">
                         <img src="../cartes_booster/narcissamalfoy.png" alt="narcissa malfoy" width="200px">
                         <img src="../cartes_booster/severussnape.png" alt="severus rogue" width="200px">
                         <img src="../cartes_booster/voldemort.png" alt="voldemort" width="200px">
                     </div>
-                    <div class="cartes serd">
+                    <div class="cartes serd box">
                         <img src="../cartes_booster/filius_flitwick.png" alt="professeur flitwick" width="200px">
                         <img src="../cartes_booster/luna_lovegood.png" alt="luna luna_lovegood" width="200px">
                     </div>
-                    <div class="cartes pouf">
+                    <div class="cartes pouf box">
                         <img src="../cartes_booster/cedric_diggory.png" alt="cedric diggory" width="200px">
                         <img src="../cartes_booster/norbert_dragonneau.png" alt="norbert dragonneau" width="200px">
                     </div>

@@ -1,3 +1,11 @@
+//Sidenav
+
+const MenuButton = document.querySelector('.menu-bouton');
+const burgerMenu = document.querySelector('.burger-menu');
+MenuButton.onclick = function() {
+    burgerMenu.classList.toggle('openNav');
+}
+
 
 //Fonction qui va chercher le lien de l'API pour prendre ses données.
 function fetchpersos() {
@@ -25,24 +33,6 @@ async function displaypersos() {
         //Nous allons désormais mettre notre contenu dans la boîte que nous avons créer dans le fichier HTML
         cartes.appendChild(contenu)
     });
-
-    let house = data.house;
-    switch (house) {
-      case "Gryffindor":
-        cardElement.classList.add("gry");
-        break;
-      case "Slytherin":
-        cardElement.classList.add("sly");
-        break;
-      case "Hufflepuff":
-        cardElement.classList.add("huf");
-        break;
-      case "Ravenclaw":
-        cardElement.classList.add("rav");
-        break;
-      default:
-        cardElement.classList.add("nh");
-    }
 }
 //Désormais, nous demandons à ce que notre fonction se lance
 displaypersos()

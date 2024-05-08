@@ -183,8 +183,20 @@ header {
     }
 }
 
-img {
-    width: 500px;
+
+#booster{
+    /*Ce code-ci permet à ce que les différentes cartes ne se chevauchent pas*/
+    margin: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.card {
+    /*Pour que nos cartes ressortent bien, je vais leur donner un fond flou et légèrement blanc.*/
+    width: 20rem;
     height: auto;
     list-style-type: none;
     padding: 0;
@@ -194,16 +206,49 @@ img {
     border-radius: 10px;
     backdrop-filter: blur(20px);
     position: relative;
-}
-
-.cardUnique {
-    list-style-type: none;
-    padding: 0;
-    margin: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(153, 153, 153, 0.6);
-    border-radius: 10px;
-    backdrop-filter: blur(50px);
-    align-items: center;
     text-align: center;
 }
+
+.card img {
+    /*J'ajuste toutes les photos pour qu'elle puisse être de taille conforme à leur boîte et également toutes pareilles.*/
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    /*Je lui donne également une transition pour la suite qui va durer 0.5s et qui va accélerer progressivement au 
+    début, ralentit au milieu et réaccélère à la fin de la transition*/
+    transition: 0.5s ease-in-out
+}
+
+
+/*Cela permet de rendre l'opacité de l'élément pour le rendre visible et cela déplace le bord légèrement vers l'intérieur de la carte*/
+.card:hover::after{
+    opacity: 1;
+    inset: 20px;
+}
+
+.boutoucarte {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.boutoucarte :hover {
+    background-color: rgba(48, 47, 47, 0.2);
+    border: 1px solid rgba(53, 53, 53, 0.6);
+    transition: 0.3s ease;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+

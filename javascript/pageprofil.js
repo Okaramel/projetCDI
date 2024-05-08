@@ -1,3 +1,11 @@
+//Sidenav
+
+const MenuButton = document.querySelector('.menu-bouton');
+const burgerMenu = document.querySelector('.burger-menu');
+MenuButton.onclick = function() {
+    burgerMenu.classList.toggle('openNav');
+}
+
 const title = document.getElementById("userName");
 const email = document.getElementById("userEmail");
 
@@ -5,7 +13,7 @@ const fetchUser = async () => {
   const token = localStorage.getItem("token");
 
   if (!token) {
-    window.location.href = "/page4.html";
+    window.location.href = "/connexion.html";
     return;
   }
 
@@ -17,10 +25,10 @@ const fetchUser = async () => {
   });
 
   if (response.status === 401) {
-    window.location.href = "/page4.html";
+    window.location.href = "/connexion.html";
     return;
   } else if (response.status === 403) {
-    window.location.href = "/page4.html";
+    window.location.href = "/connexion.html";
     return;
   }
 

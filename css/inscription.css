@@ -183,27 +183,87 @@ header {
     }
 }
 
-img {
-    width: 500px;
-    height: auto;
-    list-style-type: none;
-    padding: 0;
-    margin: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
+form {
     border: 1px solid rgba(153, 153, 153, 0.6);
+    margin-top: 50px;
     border-radius: 10px;
-    backdrop-filter: blur(20px);
-    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
 }
 
-.cardUnique {
-    list-style-type: none;
-    padding: 0;
-    margin: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(153, 153, 153, 0.6);
-    border-radius: 10px;
-    backdrop-filter: blur(50px);
+form > div {
+    margin: 30px 20px;
+    display: flex;
     align-items: center;
-    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+}
+
+input {
+    height:20px ;
+    width: 40%;
+    color: #565656;
+    background: none;
+    padding: 0.625rem;
+    border: 2px solid #030104
+}
+
+button {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    padding: 10px 32px;
+    cursor: pointer
+}
+
+.message-error {
+    border: 1px solid rgb(212, 42, 0);
+    color: rgb(0, 0, 0);
+    background-color: rgba(212, 42, 0, 0.4);
+    padding: 16px 32px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.message-error.visible{
+    display: block;
+}
+
+.message-success.visible{
+    display: block;
+}
+
+.message-success {
+    border: 1px solid rgb(81, 150, 2);
+    color: rgb(0, 0, 0);
+    background-color: rgba(81, 150, 2, 0.4);
+    padding: 16px 32px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.success {
+    border: 1px solid rgb(81, 158, 2);
+    background-color: rgba(113, 212, 0, 0.4);
+}
+
+.wrapper h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    color: white;
+}
+
+.wrapper {
+    margin:10px;
+}
+
+
+.content {
+    display: flex;
+    align-items: center;
 }

@@ -183,27 +183,51 @@ header {
     }
 }
 
-img {
-    width: 500px;
-    height: auto;
-    list-style-type: none;
-    padding: 0;
-    margin: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(153, 153, 153, 0.6);
-    border-radius: 10px;
-    backdrop-filter: blur(20px);
-    position: relative;
+.profil{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.cardUnique {
-    list-style-type: none;
-    padding: 0;
-    margin: 15px;
+.pfp {
+    display: flex;
+    justify-content: content;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.galerie {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    padding: 200px;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(153, 153, 153, 0.6);
     border-radius: 10px;
     backdrop-filter: blur(50px);
+}
+
+.boosters {
+    color: rgb(71, 71, 71);
+    display: flex;
+    justify-content: center;
+}
+
+.perso {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: black;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
 }

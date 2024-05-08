@@ -1,3 +1,12 @@
+//Sidenav
+
+const MenuButton = document.querySelector('.menu-bouton');
+const burgerMenu = document.querySelector('.burger-menu');
+MenuButton.onclick = function() {
+    burgerMenu.classList.toggle('openNav');
+}
+
+
 const formulaire = document.getElementById("formulaire");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
@@ -23,7 +32,7 @@ formulaire.addEventListener("submit", async (event) => {
   localStorage.setItem("token", token);
 
   if (token) {
-    window.location.href = "page2.html";
+    window.location.href = "pageprofil.html";
     return;
   }
 });

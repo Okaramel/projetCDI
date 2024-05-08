@@ -1,3 +1,12 @@
+//Sidenav
+
+const MenuButton = document.querySelector('.menu-bouton');
+const burgerMenu = document.querySelector('.burger-menu');
+MenuButton.onclick = function() {
+    burgerMenu.classList.toggle('openNav');
+}
+
+//Système de filtres
 document.querySelectorAll('.filtre').forEach(function(button) {
     button.addEventListener('click', function () {
         var filtre = this.getAttribute ('data-filter')
