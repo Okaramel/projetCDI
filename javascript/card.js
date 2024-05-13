@@ -6,6 +6,13 @@ MenuButton.onclick = function() {
     burgerMenu.classList.toggle('openNav');
 }
 
+// Bouton Flottant
+const floatingbutton = document.querySelector('.floating-button');
+const contenu = document.querySelector('.content');
+floatingbutton.onclick = function() {
+    contenu.classList.toggle('contentappear');
+}
+
 async function fetchCard() {
     let url = new URLSearchParams(window.location.search);
     let slug = url.get('id');
@@ -21,13 +28,18 @@ async function fetchCard() {
     profil.innerHTML = '';
     profil.innerHTML += `
     <div class="cardUnique">
-        <img src = `+ card.image +` alt = "image de ` + card.name + `" >
-        <h1>` + card.name +  `</h1>
-        <h2>` + card.house +`</h2>
-        <h2>` + card.role +`</h2>
-        <h3>` + card.wand +`</h3>
-        <h3>` + card.patronus +`</h3>
-        <h3>` + card.blood +`</h3>
+    <div class="img column">
+        <img src = `+ card.image +` alt = "image de ` + card.name + `" ></div>
+        <div class="identite column">
+        <ul>
+            <li><h1> Identité : ` + card.name +  `</h1></li>
+            <li><h2> Maison : ` + card.house +`</h2></li>
+            <li><h2> Rôle : ` + card.role +`</h2></li>
+            <li><h3> Baguette : ` + card.wand +`</h3></li>
+            <li><h3> Patronus : ` + card.patronus +`</h3></li>
+            <li><h3> Sang : ` + card.blood +`</h3></li>
+        </ul>
+        </div>
     </div>`;
     return card;
 }

@@ -1,11 +1,3 @@
-//Sidenav
-
-const MenuButton = document.querySelector('.menu-bouton');
-const burgerMenu = document.querySelector('.burger-menu');
-MenuButton.onclick = function() {
-    burgerMenu.classList.toggle('openNav');
-}
-
 
 //Fonction qui va chercher le lien de l'API pour prendre ses données.
 function fetchpersos() {
@@ -28,11 +20,83 @@ async function displaypersos() {
         contenu.classList.add("card")
         //Dans cette boîte nous allons ajouter les données que nous voulons depuis l'API 
         contenu.innerHTML = `
-        <img src="${data.image}" alt="${data.name}"/>
-        <h1><button class="boutoucarte"><a href="card.html?id=${data.slug}">${data.name}</a></button></h1>`
+        <img class="photo" src="${data.image}" alt="${data.name}"/>
+        <button class="boutoncarte"><a class="title" href="card.html?id=${data.slug}">${data.name}</a></button>`
         //Nous allons désormais mettre notre contenu dans la boîte que nous avons créer dans le fichier HTML
         cartes.appendChild(contenu)
     });
 }
 //Désormais, nous demandons à ce que notre fonction se lance
 displaypersos()
+
+//Rechercher dynamique
+const searchInput = document.querySelector('#search');
+const searchResult = document.querySelector(".results");
+
+let dataArray;
+
+async function getCharacters() {
+    const res = await fetch ("https://hp-api.lainocs.fr/characters")
+
+    const { results } = await res.json()
+    dataArray = orderList(results)
+    createCharactersList(dataArray)
+}
+function orderList(database) {
+    const orderedData = database.sort((a,b) => {
+        if (a.name.toLowerCase() < b.name.toLowerCase()) {
+            return -1;
+        }
+
+        if (a.name.toLowerCase() > b.name.toLowerCase()) {
+            return 1;
+        }
+    })
+
+    return orderedData; 
+}
+
+function createCharactersList(characterslist) {
+    characterslist.forEach(character => {
+        const listItem = document.createElement("div");
+        listItem.setAttribute("class", "card")
+
+        listItem.innerHTML =
+        `<img class="photo" src="${data.image}" alt="${data.name}"/>
+        <button class="boutoncarte"><a class="title" href="card.html?id=${data.slug}">${data.name}</a></button>`
+
+        searchResult.appendChild(listItem);
+    })
+}
+
+searchInput.addEventListener("input", filterData)
+
+function filterData(e) {
+    searchResult.innerHTML = "";
+
+    const searchedString = e.target.value.toLowerCase();
+
+    const filteredArr = dataArray.filter(el => el.name.toLowerCase().includes(searchedString))
+
+    createCharactersList(filteredArr)
+}
+
+
+
+
+
+
+
+//Sidenav
+const MenuButton = document.querySelector('.menu-bouton');
+const burgerMenu = document.querySelector('.burger-menu');
+MenuButton.onclick = function() {
+    burgerMenu.classList.toggle('openNav');
+}
+
+// Bouton Flottant
+const floatingbutton = document.querySelector('.floating-button');
+const contenu = document.querySelector('.content');
+floatingbutton.onclick = function() {
+    contenu.classList.toggle('contentappear');
+}

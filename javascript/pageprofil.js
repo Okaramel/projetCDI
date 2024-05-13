@@ -6,6 +6,13 @@ MenuButton.onclick = function() {
     burgerMenu.classList.toggle('openNav');
 }
 
+// Bouton Flottant
+const floatingbutton = document.querySelector('.floating-button');
+const contenu = document.querySelector('.content');
+floatingbutton.onclick = function() {
+    contenu.classList.toggle('contentappear');
+}
+
 const title = document.getElementById("userName");
 const email = document.getElementById("userEmail");
 

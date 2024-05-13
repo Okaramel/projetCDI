@@ -125,6 +125,7 @@ header {
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
 }
 
 .burger-menu.openNav {
@@ -183,9 +184,8 @@ header {
     }
 }
 
-img {
-    width: 500px;
-    height: auto;
+.img img {
+    width: 400px;
     list-style-type: none;
     padding: 0;
     margin: 10px;
@@ -193,17 +193,78 @@ img {
     border: 1px solid rgba(153, 153, 153, 0.6);
     border-radius: 10px;
     backdrop-filter: blur(20px);
-    position: relative;
 }
 
 .cardUnique {
+    margin-top: 50px;
     list-style-type: none;
     padding: 0;
-    margin: 15px;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(153, 153, 153, 0.6);
     border-radius: 10px;
     backdrop-filter: blur(50px);
+    display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+
+}
+
+.bars {
+    width: 50px;
+    height:50px;
+    background-color: transparent;
+    border: none;
+}
+
+.column {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+li {
+    margin: 20px;
+    margin-right: 20px;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px; /* Réglez la position verticale */
+    right: 20px; /* Réglez la position horizontale */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff; /* Changez la couleur du fond selon vos préférences */
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.floating-button img {
+    width: 35px;
+    height: 35px;
+}
+
+.content {
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    line-height: 1.4;
+    text-align: left;
+    width: 250px;
+    transform: translate(-180px, -50%);
+    pointer-events: none;
+    display: none;
+}
+
+.floating-button .contentappear {
+    display: block;
 }

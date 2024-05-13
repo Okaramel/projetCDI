@@ -14,8 +14,8 @@
             </div>
             <!--Liste pour le menu de la navigation-->
             <ul class="menu">
-                <li> <a href="index.html">Accueil</a> </li>
-                <li> <a href="personnages.html">Personnages</a> </li>
+                <li> <a class="link" href="index.html">Accueil</a> </li>
+                <li> <a class="link" href="personnages.html">Personnages</a> </li>
             </ul>
             <div class="buttons">
                 <a class="active co" href="connexion.html">Se connecter</a>
@@ -40,6 +40,30 @@
 
 
     <main>
+        <button class="floating-button">
+            <img src="../svg/comment-solid.svg" alt="">
+            <p class="content">Bienvenue ! Ici, vous pouvez discuter avec vos amis et échanger des cartes Harry Potter !</p>
+        </button>
+
+        <div class="input-control">
+            <label for="search">
+            </label>
+            <input type="text" id="search" placeholder="Cherchez un personnage...">
+        </div>
+
+        <div class="results"></div>
+
+        
+        <div class="listing box">
+            <div class="filtres">
+                <button class="filtre" data-filter="tous">Tous</button>
+                <button class="filtre" data-filter="gryf">Gryffondor</button>
+                <button class="filtre" data-filter="serp">Serpentard</button>
+                <button class="filtre" data-filter="serd">Serdaigle</button>
+                <button class="filtre" data-filter="pouf">Poufsouffle</button>
+            </div>
+
+            
         <!--La boîte qui va comprendre toutes les autres boîtes avec les personnages.-->
         <div id="booster">
         </div>
