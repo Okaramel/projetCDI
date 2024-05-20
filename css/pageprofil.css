@@ -199,7 +199,7 @@ header {
     border-radius: 50%;
 }
 
-.galerie {
+#collection {
     display: flex;
     justify-content: center;
     margin: 100px;
@@ -269,3 +269,126 @@ h1 {
 .floating-button .contentappear {
     display: block;
 }
+
+#booster{
+    /*Ce code-ci permet à ce que les différentes cartes ne se chevauchent pas*/
+    margin: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    /*Pour que nos cartes ressortent bien, je vais leur donner un fond flou et légèrement blanc.*/
+    width: 20rem;
+    height: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.card img {
+    /*J'ajuste toutes les photos pour qu'elle puisse être de taille conforme à leur boîte et également toutes pareilles.*/
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    /*Je lui donne également une transition pour la suite qui va durer 0.5s et qui va accélerer progressivement au 
+    début, ralentit au milieu et réaccélère à la fin de la transition*/
+    transition: 0.5s ease-in-out
+}
+
+
+
+/*Cela permet de rendre l'opacité de l'élément pour le rendre visible et cela déplace le bord légèrement vers l'intérieur de la carte*/
+.card:hover::after{
+    opacity: 1;
+    inset: 20px;
+}
+
+.cartes {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    justify-content: center;
+
+}
+
+.cartes:hover {
+    color: white;
+    transition: 0.3s ease;
+}
+
+#bouton-booster {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.newcards {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgba(22, 25, 39, 50%);
+}
+  
+.cardsList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+  
+.close {
+    padding: 7px 14px;
+    border-radius: 5px;
+    background-color: #383838;
+    color: #f9f9f9;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+  
+.close:hover {
+    background-color: #121212;
+}
+
+.quantite {
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 100%;
+  }

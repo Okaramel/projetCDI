@@ -7,15 +7,15 @@ const port = 3000;
 const ip = require("ip");
 const ipAddr = ip.address();
 
-let LHV = "Slytherin";
+let LHV = "Gryffindor";
 
 app.get("/house", (req, res) => {
-  res.json({ message: LHV });
+  return res.json({ message: LHV });
 });
 
 app.post("/house", (req, res) => {
   LHV = req.body.house;
-  res.json({ message: LHV });
+  return res.json({ message: LHV });
 });
 
 app.use(cors());

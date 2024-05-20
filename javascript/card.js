@@ -47,7 +47,7 @@ async function fetchCard() {
 
 async function UpdateColor() {
     const persoColor = await displayCard();
-    const response = await fetch('/Color', {
+    const response = await fetch('/house', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

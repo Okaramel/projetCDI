@@ -225,6 +225,7 @@ header {
 }
 
 
+
 /*Cela permet de rendre l'opacité de l'élément pour le rendre visible et cela déplace le bord légèrement vers l'intérieur de la carte*/
 .card:hover::after{
     opacity: 1;
@@ -299,3 +300,14 @@ header {
     display: block;
 }
 
+.hidden {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+.active {
+    display: block;
+}

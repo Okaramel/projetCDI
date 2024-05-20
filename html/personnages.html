@@ -45,25 +45,31 @@
             <p class="content">Bienvenue ! Ici, vous pouvez discuter avec vos amis et échanger des cartes Harry Potter !</p>
         </button>
 
-        <div class="input-control">
-            <label for="search">
-            </label>
-            <input type="text" id="search" placeholder="Cherchez un personnage...">
+        
+        <div class="Recherche">
+            <input type="text" id="searchInput" placeholder="Look of a character">
         </div>
 
-        <div class="results"></div>
-
         
-        <div class="listing box">
-            <div class="filtres">
-                <button class="filtre" data-filter="tous">Tous</button>
-                <button class="filtre" data-filter="gryf">Gryffondor</button>
-                <button class="filtre" data-filter="serp">Serpentard</button>
-                <button class="filtre" data-filter="serd">Serdaigle</button>
-                <button class="filtre" data-filter="pouf">Poufsouffle</button>
-            </div>
+        <div id = "boutonContainer">
+            <input type="radio", id="all" , name="maison", value="Tous les personnages" checked>
+            <label for="tous">Tous les personnages</label>
 
-            
+            <input type="radio", id="Gryffindor", name="maison", value="Gryffindor">
+            <label for="Gryffondor">Gryffindor</label>
+
+            <input type="radio", id="Slytherin", name="maison",value="Slytherin">
+            <label for="Slytherin">Slytherin</label>
+
+            <input type="radio", id="Hufflepuff", name="maison",value="Hufflepuff">
+            <label for="Hufflepuff">Hufflepuff</label>
+
+            <input type="radio", id="Ravenclaw", name="maison", value="Ravenclaw">
+            <label for="Ravenclaw">Ravenclaw</label>
+
+            <input type="radio",id="Sans Maison", name="maison", value="Sans Maison">
+            <label for="Sans Maison">Sans Maison</label>
+        </div>
         <!--La boîte qui va comprendre toutes les autres boîtes avec les personnages.-->
         <div id="booster">
         </div>
