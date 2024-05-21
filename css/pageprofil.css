@@ -270,14 +270,15 @@ h1 {
     display: block;
 }
 
-#booster{
+#collection{
     /*Ce code-ci permet à ce que les différentes cartes ne se chevauchent pas*/
     margin: 20px;
     margin-top: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
+
 
 .card {
     /*Pour que nos cartes ressortent bien, je vais leur donner un fond flou et légèrement blanc.*/
@@ -309,6 +310,20 @@ h1 {
 .card:hover::after{
     opacity: 1;
     inset: 20px;
+}
+
+h3 {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
 }
 
 .cartes {
@@ -346,6 +361,8 @@ h1 {
 }
 
 .newcards {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -391,4 +408,4 @@ h1 {
     top: 10px;
     right: 10px;
     border-radius: 100%;
-  }
+}

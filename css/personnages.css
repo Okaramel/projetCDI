@@ -2,12 +2,9 @@
 
 body {
     background-image: url("../images/accueil.png");
-    background-position: top center;
+    background-position: center;
     background-size: none;
     background-repeat: no-repeat;
-    background-attachment: scroll;
-    text-decoration: none;
-    flex-direction: column;
     background-attachment: fixed;
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -20,17 +17,12 @@ body {
     text-decoration: none;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 
 li {
     list-style-type: none;
 }
 
-.link {
+a{
 
     color: white;
     text-decoration: none;
@@ -38,7 +30,7 @@ li {
     font-size: 1rem;
 }
 
-.link :hover{
+a:hover{
     color: goldenrod;
     transition: .5s
 
@@ -310,4 +302,35 @@ header {
 
 .active {
     display: block;
+}
+
+#boutonContainer {
+    margin-top : 30px;
+    margin-left: 10px ;
+}
+
+label {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: black;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius:5px;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Recherche {
+    margin: 30px;
+}
+
+#searchInput {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+        height:40px;
+        color: white;
+        background: none;
+        padding: 0.625rem;
 }

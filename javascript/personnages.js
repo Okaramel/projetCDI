@@ -5,7 +5,7 @@
 //Fonction asynchrone pour que cette fonction se lance en même temps que la fonction d'au-dessus
 async function displaypersos() {
     //await va pouvoir aider à débloquer la fonction juste au-dessus
-    const persos = await fetchData()
+    const persos = await fetchData();
     //On prend depuis notre fichier HTML notre boîte avec l'ID "booster"
     const cartes = document.getElementById("booster")
 
@@ -62,7 +62,7 @@ const filtreBouton = document.querySelectorAll('input[type=radio][name="maison"]
 
 filtreBouton.forEach((bouton) => {
     bouton.addEventListener('change', async() =>{
-        const apiData = await fetchpersos();
+        const apiData = await fetchData();
         houseChoice = bouton.id                                     
         let triHouse = []                                           
         if (houseChoice == "all"){                                  
