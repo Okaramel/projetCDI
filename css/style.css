@@ -252,6 +252,7 @@ h3 {
     transform: translate(-180px, -50%);
     pointer-events: none;
     display: none;
+    color: white;
 }
 
 .floating-button .contentappear {
