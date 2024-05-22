@@ -6,10 +6,9 @@ MenuButton.onclick = function() {
     burgerMenu.classList.toggle('openNav');
 }
 
-let form = document.querySelector('form')
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault()
+//Inscription
+let form = document.querySelector('form')
 
     let errorContainer = document.querySelector('.message-error')
     let errorList = document.querySelector('.message-error ul')
@@ -72,7 +71,7 @@ form.addEventListener('submit', function (event) {
         passwordConfirm.classList.add('success')
     }
 
-    let successContainer = document.querySelector('message-success')
+    let successContainer = document.querySelector('.message-success')
     successContainer.classList.remove('visible')
 
     if (email.classList.contains('success') &&
@@ -83,4 +82,29 @@ form.addEventListener('submit', function (event) {
     ) {
         successContainer.classList.add('visible')
     }
-})
+
+    const emailsignup = document.getElementById("email");
+    const pseudosignup = document.getElementById("pseudo");
+    const passwordsignup = document.getElementById("password");
+    const password2signup = document.getElementById("password2");
+    
+form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (password2signup.value !== passwordsignup.value) {
+            alert("Passwords do not match");
+            return;
+        }
+    
+    const response = await fetch("http://127.0.0.1:3000/users", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+            email: emailsignup.value,
+            name: pseudosignup.value,
+            password: passwordsignup.value,
+            }),
+    });
+        const data = await response.json();
+});
