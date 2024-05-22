@@ -3,7 +3,6 @@
 body {
     background-image: url("../images/accueil.png");
     background-position: center;
-    background-size: none;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: rgba(255, 255, 255, 0.2);

@@ -3,7 +3,6 @@
 body {
     background-image: url("../images/accueil.png");
     background-position: top center;
-    background-size: none;
     background-repeat: no-repeat;
     background-attachment: scroll;
     text-decoration: none;
@@ -193,7 +192,6 @@ header {
 
 .pfp {
     display: flex;
-    justify-content: content;
     width: 150px;
     height: 150px;
     border-radius: 50%;
