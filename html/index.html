@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -21,6 +22,42 @@
 
     <main>
         <!--Boîte qui enveloppe tout le contenu-->
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Harry Potter</a>
+            </div>
+            <!--Liste pour le menu de la navigation-->
+            <ul class="menu">
+                <li> <a href="index.html">Accueil</a> </li>
+                <li> <a href="personnages.html">Personnages</a> </li>
+            </ul>
+            <div class="buttons">
+                <a class="active co" href="connexion.html">Se connecter</a>
+                <a class="active ins" href="inscription.html">S'inscrire</a>
+            </div>
+            <div class="menu-bouton">
+                <img src="../svg/bars-solid (1).svg" alt="" width="30">
+            </div>
+        </div>
+        <div class="burger-menu">
+            <ul class="menu">
+                <li> <a href="index.html">Accueil</a> </li>
+                <li> <a href="personnages.html">Personnages</a> </li>
+                <div class="divider"></div>
+                <div class="buttons-menu">
+                    <a class="active co" href="connexion.html">Se connecter</a>
+                    <a class="active ins" href="inscription.html">S'inscrire</a>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <button class="floating-button">
+            <img src="../svg/comment-solid.svg" alt="">
+            <p class="content">Bienvenue ! Ici, vous pouvez discuter avec vos amis et échanger des cartes Harry Potter !</p>
+        </button>
+
         <div class="principal">
             <div class="intro">
                 <h1>Collectionnez dès maintenant les cartes de l'univers d'Harry Potter !</h1>
@@ -65,6 +102,12 @@
                 </div>
             </div>
         </div>
+
+            <div class="presentationcartes">
+                <img class="houses" src="../images/presentation_cartes.png" alt="cartes hp">
+            </div>
+
+
     </main>
 
     <footer></footer>

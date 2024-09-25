@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/personnages.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Harry Potter</a>
+            </div>
+            <!--Liste pour le menu de la navigation-->
+            <ul class="menu">
+                <li> <a class="link" href="index.html">Accueil</a> </li>
+                <li> <a class="link" href="personnages.html">Personnages</a> </li>
+            </ul>
+            <div class="buttons">
+                <a class="active co" href="connexion.html">Se connecter</a>
+                <a class="active ins" href="inscription.html">S'inscrire</a>
+            </div>
+            <div class="menu-bouton">
+                <img src="../svg/bars-solid (1).svg" alt="" width="30">
+            </div>
+        </div>
+        <div class="burger-menu">
+            <ul class="menu">
+                <li> <a href="index.html">Accueil</a> </li>
+                <li> <a href="personnages.html">Personnages</a> </li>
+                <div class="divider"></div>
+                <div class="buttons-menu">
+                    <a class="active co" href="connexion.html">Se connecter</a>
+                    <a class="active ins" href="inscription.html">S'inscrire</a>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+
+    <main>
+        <button class="floating-button">
+            <img src="../svg/comment-solid.svg" alt="">
+            <p class="content">Bienvenue ! Ici, vous pouvez discuter avec vos amis et échanger des cartes Harry Potter !</p>
+        </button>
+
+        
+        <div id = "boutonContainer">
+            <input type="radio", id="all" , name="maison", value="Tous les personnages" checked>
+            <label for="tous">Tous les personnages</label>
+
+            <input type="radio", id="Gryffindor", name="maison", value="Gryffindor">
+            <label for="Gryffondor">Gryffindor</label>
+
+            <input type="radio", id="Slytherin", name="maison",value="Slytherin">
+            <label for="Slytherin">Slytherin</label>
+
+            <input type="radio", id="Hufflepuff", name="maison",value="Hufflepuff">
+            <label for="Hufflepuff">Hufflepuff</label>
+
+            <input type="radio", id="Ravenclaw", name="maison", value="Ravenclaw">
+            <label for="Ravenclaw">Ravenclaw</label>
+
+            <input type="radio",id="Sans Maison", name="maison", value="Sans Maison">
+            <label for="Sans Maison">Sans Maison</label>
+        </div>
+
+        <div class="Recherche">
+            <input type="text" id="searchInput" placeholder="Look of a character">
+        </div>
+        
+        <!--La boîte qui va comprendre toutes les autres boîtes avec les personnages.-->
+        <div id="booster">
+        </div>
+
+
+    </main>
+    <footer></footer>
+    <script src="../javascript/personnages.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/connexion.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Harry Potter</a>
+            </div>
+            <!--Liste pour le menu de la navigation-->
+            <ul class="menu">
+                <li> <a href="index.html">Accueil</a> </li>
+                <li> <a href="personnages.html">Personnages</a> </li>
+            </ul>
+            <div class="buttons">
+                <a class="active co" href="connexion.html">Se connecter</a>
+                <a class="active ins" href="inscription.html">S'inscrire</a>
+            </div>
+            <div class="menu-bouton">
+                <img src="../svg/bars-solid (1).svg" alt="" width="30">
+            </div>
+        </div>
+        <div class="burger-menu">
+            <ul class="menu">
+                <li> <a href="index.html">Accueil</a> </li>
+                <li> <a href="personnages.html">Personnages</a> </li>
+                <div class="divider"></div>
+                <div class="buttons-menu">
+                    <a class="active co" href="connexion.html">Se connecter</a>
+                    <a class="active ins" href="inscription.html">S'inscrire</a>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!--Formulaire de la page de connexion-->
+        <div class="field">
+            <div class="message-error">
+                <ul></ul>
+            </div> 
+            <div class="login-box">
+                <h1>Connexion</h1>
+                <form id="formulaire" action="" method="post" enctype="multipart/form-data">
+                    <div class="box">
+                        <label for="email">Email : </label>
+                        <input type="email" name="email" id="email">
+                    </div>
+            
+                    <div class="box">
+                        <label for="password">Mot de passe : </label>
+                        <input type="password" name="password" id="password">
+                    </div>
+            
+                    <button class="submit" type="submit">Se connecter</button>
+                    <div class="register-link">
+                        <p>Tu n'as pas encore de compte ? <a href="inscription.html">S'inscrire</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="../javascript/connexion.js"></script>
+</body>
+</html>

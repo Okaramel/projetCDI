@@ -3,39 +3,13 @@
 body {
     background-image: url("../images/accueil.png");
     background-position: top center;
-    background-size: none;
     background-repeat: no-repeat;
     background-attachment: scroll;
     text-decoration: none;
-    margin: 0;
     flex-direction: column;
     background-attachment: fixed;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(2px);
-    font-family: 'Playfair Display', serif;
-}
-
-header{
-    text-decoration: none;
-
-}
-
-.menu{
-    list-style-type: none;
-    text-decoration: none;
-}
-
-nav ul{
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-nav a{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 * {
@@ -43,7 +17,6 @@ nav a{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
-    text-decoration: none;
 }
 
 
@@ -56,18 +29,6 @@ a{
     color: white;
     text-decoration: none;
     transition: .5s;
-}
-
-a{
-    color: white;
-}
-
-nav a:hover{
-    color: goldenrod;
-}
-
-h1{
-    color: white;
     font-size: 1rem;
 }
 
@@ -222,98 +183,48 @@ header {
     }
 }
 
-h1{
-    color: black;
-    margin-left: 5px;
-    margin-top: 100px;
-    margin-bottom: 0;
-    align-items: center;
-    text-align: center;
-}
-
-p{
-    color: white;
-    color: black;
-    margin-left: 5px;
-    align-items: center;
-    margin-top: 0;
-    text-align: center;
-}
-
-.presentationcartes{
+.profil{
+    margin-top: 60px;
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    align-items: center;
 }
 
-.listing{
-    margin-top: 200px;
-    list-style-type: none;
-    padding: 0;
-    margin: 15px;
+.pfp {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#collection {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    padding: 200px;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(153, 153, 153, 0.6);
     border-radius: 10px;
     backdrop-filter: blur(50px);
 }
 
-.cartes{
-    display: inline;
-}
-
-ul{
-    list-style-type: none;
-}
-
-#list{
-    list-style: none;
-}
-
-li {
-    display: inline;
-}
-
-h3 {
-    padding-left: 60px;
-    color: white;
-}
-
-.display_card{
-    transition: 1s;
-    transform: scale(1);
-}
-
-img:hover{
-    transform: scale(1.1);
-}
-
-.filtre {
-    padding: 5px 10px;
-    margin: 5px;
-    cursor: pointer;
-    background-color: goldenrod;
-    backdrop-filter: blur(10px);
-    border-radius: 5px;
-}
-
-.filtre:hover {
-    color: rgb(248, 202, 86);
-    transition: 0.2s;
-    border: 1px solid rgb(248, 202, 86);
-}
-
-.cartes {
-    display: block;
-}
-
-.hidden {
-    display: none;
-.houses {
+.boosters {
+    color: rgb(71, 71, 71);
     display: flex;
     justify-content: center;
-    width: 700px;
 }
 
+.perso {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .floating-button {
     position: fixed;
@@ -351,9 +262,148 @@ img:hover{
     transform: translate(-180px, -50%);
     pointer-events: none;
     display: none;
-    color: white;
 }
 
 .floating-button .contentappear {
     display: block;
+}
+
+#collection{
+    /*Ce code-ci permet à ce que les différentes cartes ne se chevauchent pas*/
+    margin: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.card {
+    /*Pour que nos cartes ressortent bien, je vais leur donner un fond flou et légèrement blanc.*/
+    width: 20rem;
+    height: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.card img {
+    /*J'ajuste toutes les photos pour qu'elle puisse être de taille conforme à leur boîte et également toutes pareilles.*/
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    /*Je lui donne également une transition pour la suite qui va durer 0.5s et qui va accélerer progressivement au 
+    début, ralentit au milieu et réaccélère à la fin de la transition*/
+    transition: 0.5s ease-in-out
+}
+
+
+
+/*Cela permet de rendre l'opacité de l'élément pour le rendre visible et cela déplace le bord légèrement vers l'intérieur de la carte*/
+.card:hover::after{
+    opacity: 1;
+    inset: 20px;
+}
+
+h3 {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+}
+
+.cartes {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    justify-content: center;
+
+}
+
+.cartes:hover {
+    color: white;
+    transition: 0.3s ease;
+}
+
+#bouton-booster {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.newcards {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgba(22, 25, 39, 50%);
+}
+  
+.cardsList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+  
+.close {
+    padding: 7px 14px;
+    border-radius: 5px;
+    background-color: #383838;
+    color: #f9f9f9;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+  
+.close:hover {
+    background-color: #121212;
+}
+
+.quantite {
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 100%;
 }
