@@ -8,7 +8,7 @@
 ## Fonctionnalités
 
 <br/>
-- [ x ] UX/UI attractif
+- [X] UX/UI attractif
 <br />
 - [ x ] Exploitation d'une API
 <br />
