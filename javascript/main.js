@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.querySelectorAll('.filtre').forEach(function(button) {
     button.addEventListener('click', function () {
         var filtre = this.getAttribute ('data-filter')
@@ -13,7 +12,7 @@ document.querySelectorAll('.filtre').forEach(function(button) {
         })
     })
 })
-=======
+
 //Sidenav
 const MenuButton = document.querySelector('.menu-bouton');
 const burgerMenu = document.querySelector('.burger-menu');
@@ -27,4 +26,3 @@ const contenu = document.querySelector('.content');
 floatingbutton.onclick = function() {
     contenu.classList.toggle('contentappear');
 }
->>>>>>> ead13cf27698f904ca08bfa482171e6ffdbebebe
