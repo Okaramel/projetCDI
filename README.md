@@ -8,13 +8,15 @@
 ## Fonctionnalités
 
 <br/>
-- [x] UX/UI attractif
+- [ x ] UX/UI attractif
 <br />
-- [x] Exploitation d'une API
+- [ x ] Exploitation d'une API
 <br />
-- [x] Possibilité d'ouvrir un booster tous les 24h.
+- [ x ] Possibilité d'ouvrir un booster tous les 24h.
 <br />
-- [x] Gestion de deux bases de données : Base de données d'utilisateur et base de données sur la quantité de cartes que l'utilisateur possède.
+- [ x ] Gestion de deux bases de données : Base de données d'utilisateur et base de données sur la quantité de cartes que l'utilisateur possède.
 <br />
-- [ ] Echange de cartes entre utilisateurs (SOON)
+- [   ] Echange de cartes entre utilisateurs (SOON)
 
+## Outils utilisés
+- 
