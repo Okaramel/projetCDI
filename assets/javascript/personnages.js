@@ -32,7 +32,7 @@ const DataList = document.getElementById('booster');
 let cartes = [];
 async function fetchData() {
     try {
-        const response = await fetch('https://hp-api.lainocs.fr/characters');
+        const response = await fetch('https://hp-api.onrender.com/api/characters');
         cartes = await response.json();
         return cartes;
     } catch (error) {

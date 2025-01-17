@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "prisma": "^6.2.1"
+  },
+  "name": "projetcdi",
+  "version": "1.0.0",
+  "description": "Projet d'échange de carte pokemon dans le cadre d'une soutenance de la fin de ma première année.",
+  "main": "Node.js",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 body {
-    background-image: url("../images/accueil.png");
-    background-position: center;
+    background-image: url("/assets/images/accueil.png");
+    background-position: top center;
     background-repeat: no-repeat;
+    background-attachment: scroll;
+    text-decoration: none;
+    flex-direction: column;
     background-attachment: fixed;
     background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
 }
 
 * {
@@ -13,7 +17,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
-    text-decoration: none;
 }
 
 
@@ -37,7 +40,7 @@ a:hover{
 
 header {
     position: relative;
-    padding: 0 2rem;
+    padding: 0;
     background-color: rgba(0,0,0,0.238);
 }
 
@@ -178,4 +181,98 @@ header {
     .burger-menu {
         display: block;
     }
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+}
+
+input {
+    height:40px ;
+    width: 70%;
+    color: black;
+    background: none;
+    padding: 0.625rem;
+    border: 2px solid #030104
+}
+
+button {
+    padding: 10px 32px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black
+}
+
+label {
+    color: black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-error {
+    border: 1px solid rgb(212, 42, 0);
+    color: rgb(0, 0, 0);
+    background-color: rgba(212, 42, 0, 0.4);
+    padding: 16px 32px;
+    display: none;
+}
+
+.message-error.visible{
+    display: block;
+}
+
+.message-success.visible{
+    display: block;
+}
+
+.message-success {
+    border: 1px solid rgb(81, 150, 2);
+    color: rgb(0, 0, 0);
+    background-color: rgba(81, 150, 2, 0.4);
+    padding: 16px 32px;
+    display: none;
+}
+
+.success {
+    border: 1px solid rgb(81, 158, 2);
+    background-color: rgba(113, 212, 0, 0.4);
+}
+
+.wrapper {
+    position: relative;
+    width: 500px;
+    height: 80%;
+    border: 2px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    margin: 150px;
+}
+
+.wrapper .login-box {
+    width: 100%;
+    padding: 60px;
+}
+
+.wrapper h1 {
+    font-size: 2rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-top : 50px;
+    margin-bottom: 10px;
+}
+
+.box {
+    margin: 10px;
+}
+
+.submit {
+    margin: 10px;
 }

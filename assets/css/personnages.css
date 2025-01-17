@@ -1,37 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 body {
-    background-image: url("../images/accueil.png");
-    background-position: top center;
-    background-size: none;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    text-decoration: none;
-    margin: 0;
-    flex-direction: column;
-    background-attachment: fixed;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(2px);
-    font-family: 'Playfair Display', serif;
-}
-
-header{
-    text-decoration: none;
-
-}
-
-.menu{
-    list-style-type: none;
-    text-decoration: none;
-}
-
-nav ul{
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-nav a{
+    background-image: url("/assets/images/accueil.png");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -56,18 +26,6 @@ a{
     color: white;
     text-decoration: none;
     transition: .5s;
-}
-
-a{
-    color: white;
-}
-
-nav a:hover{
-    color: goldenrod;
-}
-
-h1{
-    color: white;
     font-size: 1rem;
 }
 
@@ -222,98 +180,74 @@ header {
     }
 }
 
-h1{
-    color: black;
-    margin-left: 5px;
-    margin-top: 100px;
-    margin-bottom: 0;
-    align-items: center;
-    text-align: center;
-}
 
-p{
-    color: white;
-    color: black;
-    margin-left: 5px;
-    align-items: center;
-    margin-top: 0;
-    text-align: center;
-}
-
-.presentationcartes{
+#booster{
+    /*Ce code-ci permet à ce que les différentes cartes ne se chevauchent pas*/
+    margin: 20px;
+    margin-top: 50px;
     display: flex;
-    justify-content: center;
-    margin-top: 150px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.listing{
-    margin-top: 200px;
+
+.card {
+    /*Pour que nos cartes ressortent bien, je vais leur donner un fond flou et légèrement blanc.*/
+    width: 20rem;
+    height: auto;
     list-style-type: none;
     padding: 0;
-    margin: 15px;
+    margin: 10px;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(153, 153, 153, 0.6);
     border-radius: 10px;
-    backdrop-filter: blur(50px);
+    position: relative;
+    text-align: center;
 }
 
-.cartes{
-    display: inline;
+.card img {
+    /*J'ajuste toutes les photos pour qu'elle puisse être de taille conforme à leur boîte et également toutes pareilles.*/
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    /*Je lui donne également une transition pour la suite qui va durer 0.5s et qui va accélerer progressivement au 
+    début, ralentit au milieu et réaccélère à la fin de la transition*/
+    transition: 0.5s ease-in-out
 }
 
-ul{
-    list-style-type: none;
+
+
+/*Cela permet de rendre l'opacité de l'élément pour le rendre visible et cela déplace le bord légèrement vers l'intérieur de la carte*/
+.card:hover::after{
+    opacity: 1;
+    inset: 20px;
 }
 
-#list{
-    list-style: none;
-}
-
-li {
-    display: inline;
-}
-
-h3 {
-    padding-left: 60px;
-    color: white;
-}
-
-.display_card{
-    transition: 1s;
-    transform: scale(1);
-}
-
-img:hover{
-    transform: scale(1.1);
-}
-
-.filtre {
-    padding: 5px 10px;
-    margin: 5px;
+.boutoncarte {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
-    background-color: goldenrod;
-    backdrop-filter: blur(10px);
-    border-radius: 5px;
+    border: none;
+    border-radius: 12px;
+
 }
 
-.filtre:hover {
-    color: rgb(248, 202, 86);
-    transition: 0.2s;
-    border: 1px solid rgb(248, 202, 86);
+.boutoncarte:hover {
+    color: white;
+    transition: 0.3s ease;
 }
 
-.cartes {
-    display: block;
+.title {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
 }
-
-.hidden {
-    display: none;
-.houses {
-    display: flex;
-    justify-content: center;
-    width: 700px;
-}
-
 
 .floating-button {
     position: fixed;
@@ -351,9 +285,51 @@ img:hover{
     transform: translate(-180px, -50%);
     pointer-events: none;
     display: none;
-    color: white;
 }
 
 .floating-button .contentappear {
     display: block;
+}
+
+.hidden {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+#boutonContainer {
+    margin-top : 30px;
+    margin-left: 10px ;
+}
+
+label {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(153, 153, 153, 0.6);
+    color: black;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius:5px;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Recherche {
+    margin: 30px;
+}
+
+#searchInput {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+        height:40px;
+        color: white;
+        background: none;
+        padding: 0.625rem;
 }

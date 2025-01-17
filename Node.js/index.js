@@ -1,4 +1,3 @@
-//ILAN JOURNO
 const express = require('express');
 const cors = require("cors");
 const app = express();
@@ -21,7 +20,7 @@ app.post("/house", (req, res) => {
 app.use(cors());
 app.use(express.json());
 
-app.use("/", require("./routes/start"));
+app.use("/", require("./Node.js/routes/start"));
 
 const initializeApp = () => {
   app.listen(port, () => {
